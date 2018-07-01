@@ -1,0 +1,16 @@
+{
+  "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20161016142654",
+    "lodash": "registry:dt/lodash#4.14.0+20160919145112",
+    "node": "registry:dt/node#6.0.0+20160925070332",
+    "react": "registry:dt/react#0.14.0+20160923124221",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "redux-promise": "registry:dt/redux-promise#0.5.3+20160914125120"
+  },
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20160601175240",
+    "react-sparklines": "registry:npm/react-sparklines#1.4.1+20160127183143"
+  }
+}
