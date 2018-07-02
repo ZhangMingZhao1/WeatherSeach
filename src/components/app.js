@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var search_bar_1 = require("../containers/search_bar");
+var weather_list_1 = require("../containers/weather_list");
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App() {
@@ -22,7 +23,8 @@ var App = /** @class */ (function (_super) {
     }
     App.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(search_bar_1.default, null)));
+            React.createElement(search_bar_1.default, null),
+            React.createElement(weather_list_1.default, null)));
     };
     return App;
 }(React.Component));

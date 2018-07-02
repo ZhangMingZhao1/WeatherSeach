@@ -1,7 +1,11 @@
 import * as React from 'react';
 
-interface ISearchBarProps {
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {fetchWeather} from "../actions";
 
+interface ISearchBarProps {
+    fetchWeather: (term: string) => void;
 }
 
 interface ISearchBarState {
@@ -9,7 +13,7 @@ interface ISearchBarState {
 }
 
 
-export default class App extends React.Component<ISearchBarProps,ISearchBarState> {
+class SearchBar extends React.Component<ISearchBarProps,ISearchBarState> {
     constructor(props) {
         super(props);
 
@@ -24,6 +28,7 @@ export default class App extends React.Component<ISearchBarProps,ISearchBarState
 
     onFormSubmit(event) {
         event.preventDefault();//这句代码让输入框点提交之后不会清空文本
+        this.props.fetchWeather(this.state.term);
         this.setState({term: ""});
     }
     render() {
@@ -42,3 +47,9 @@ export default class App extends React.Component<ISearchBarProps,ISearchBarState
         )
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return (bindActionCreators({fetchWeather:fetchWeather},dispatch));
+}
+
+export default connect<any,any,any>(null,mapDispatchToProps)(SearchBar);
