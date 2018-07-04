@@ -34,7 +34,7 @@ var SearchBar = /** @class */ (function (_super) {
     };
     SearchBar.prototype.render = function () {
         return (React.createElement("form", { className: "input-group", onSubmit: this.onFormSubmit },
-            React.createElement("input", { className: "form-control", placeholder: "\u8BF7\u8F93\u5165\u57CE\u5E02\u540D\u79F0,\u4EE5\u4FBF\u67E5\u8BE2\u672A\u67655\u65E5\u5929\u6C14\u60C5\u51B5\uFF0C\u4F8B\u5982BeiJing", onChange: this.onInputChange, value: this.state.term }),
+            React.createElement("input", { className: "form-control", placeholder: "\u8BF7\u8F93\u5165\u57CE\u5E02\u540D\u79F0,\u4EE5\u4FBF\u67E5\u8BE2\u672A\u67655\u65E5\u7684\u5E73\u5747\u5929\u6C14\u60C5\u51B5\uFF0C\u4F8B\u5982ChangSha", onChange: this.onInputChange, value: this.state.term }),
             React.createElement("span", { className: "input-group-btn" },
                 React.createElement("button", { className: "btn btn-secondary", type: "submit" }, "\u67E5\u8BE2"))));
     };

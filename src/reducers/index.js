@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Created by www.wuleba.com on 2016/9/26.
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 var redux_1 = require("redux");
 var weather_reducer_1 = require("./weather_reducer");

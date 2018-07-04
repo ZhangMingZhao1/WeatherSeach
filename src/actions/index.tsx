@@ -1,6 +1,3 @@
-/**
- * Created by www.wuleba.com on 2016/9/26.
- */
 import {log} from "util";
 import * as axios from 'axios';
 

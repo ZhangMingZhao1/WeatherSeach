@@ -36,7 +36,7 @@ class SearchBar extends React.Component<ISearchBarProps,ISearchBarState> {
             <form className="input-group" onSubmit={this.onFormSubmit}>
                 <input
                     className="form-control"
-                    placeholder="请输入城市名称,以便查询未来5日天气情况，例如BeiJing"
+                    placeholder="请输入城市名称,以便查询未来5日的平均天气情况，例如ChangSha"
                     onChange={this.onInputChange}
                     value={this.state.term}
                 />

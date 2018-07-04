@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Created by www.wuleba.com on 2016/9/26.
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
