@@ -11,7 +11,6 @@ export class App extends React.Component<void,void> {
             <div>
                 <SearchBar/>
                 <WeatherList/>
-sasadasda
             </div>
         );
     }
