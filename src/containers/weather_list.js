@@ -19,17 +19,20 @@ var WeatherList = /** @class */ (function (_super) {
     function WeatherList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    //返回的数据
     WeatherList.prototype.renderWeather = function (cityData) {
         var name = cityData.city.name;
-        // console.log('cityData',cityData);
         var temps = cityData.list.map(function (weather) { return weather.main.temp - 273.15; });
         var pressures = cityData.list.map(function (weather) { return weather.main.pressure; });
         var humidities = cityData.list.map(function (weather) { return weather.main.humidity; });
+        var popuNum = cityData.city.population;
+        // const lat = cityData.city.coord.lat;
+        // const lon = cityData.city.coord.lon;
         var _a = cityData.city.coord, lat = _a.lat, lon = _a.lon;
         return (React.createElement("tr", { key: name },
             React.createElement("td", null,
-                React.createElement(google_map_1.default, { lat: lat, lon: lon })),
+                React.createElement(google_map_1.default, { lat: lat, lon: lon }),
+                popuNum,
+                "\u4EBA"),
             React.createElement("td", null,
                 React.createElement(chart_1.default, { data: temps, color: "orange", units: "\u00B0C" })),
             React.createElement("td", null,
@@ -42,15 +45,19 @@ var WeatherList = /** @class */ (function (_super) {
             React.createElement("thead", null,
                 React.createElement("tr", null,
                     React.createElement("td", null, "\u57CE\u5E02"),
-                    React.createElement("td", null, "\u6E29\u5EA6\uFF08\u00B0C\uFF09"),
-                    React.createElement("td", null, "\u6C14\u538B\uFF08hPa\uFF09"),
-                    React.createElement("td", null, "\u6E7F\u5EA6\uFF08%\uFF09"))),
+                    React.createElement("td", null, "\u6E29\u5EA6 (\u00B0C)"),
+                    React.createElement("td", null, "\u6C14\u538B (hPa)"),
+                    React.createElement("td", null, "\u6E7F\u5EA6 (%)"))),
             React.createElement("tbody", null, this.props.weather.map(this.renderWeather))));
     };
     return WeatherList;
 }(React.Component));
-function mapStateToProps(state) {
-    return ({ weather: state.weather });
+// function mapStateToProps(state) {
+//     return ({weather: state.weather});
+// }
+function mapStateToProps(_a) {
+    var weather = _a.weather;
+    return ({ weather: weather });
 }
 exports.default = react_redux_1.connect(mapStateToProps)(WeatherList);
 //# sourceMappingURL=weather_list.js.map

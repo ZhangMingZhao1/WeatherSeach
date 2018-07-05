@@ -1,6 +1,6 @@
 {
   "globalDependencies": {
-    "axios": "registry:dt/axios#0.9.1+20161016142654",
+    "axios": "registry:dt/axios#0.9.1+20160629101425",
     "lodash": "registry:dt/lodash#4.14.0+20160919145112",
     "node": "registry:dt/node#6.0.0+20160925070332",
     "react": "registry:dt/react#0.14.0+20160923124221",

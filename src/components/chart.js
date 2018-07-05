@@ -1,11 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
 var _ = require("lodash");
+var React = require("react");
 var react_sparklines_1 = require("react-sparklines");
 function average(data) {
-    console.log('data', data);
-    console.log('average', _.round(_.sum(data) / data.length));
     return (_.round(_.sum(data) / data.length));
 }
 exports.default = (function (props) {

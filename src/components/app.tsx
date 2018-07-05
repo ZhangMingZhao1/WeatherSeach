@@ -1,4 +1,5 @@
 
+
 import * as React from 'react';
 
 import SearchBar from '../containers/search_bar';
@@ -10,6 +11,7 @@ export class App extends React.Component<void,void> {
             <div>
                 <SearchBar/>
                 <WeatherList/>
+sasadasda
             </div>
         );
     }
